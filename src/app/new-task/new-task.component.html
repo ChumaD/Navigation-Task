@@ -1,0 +1,37 @@
+
+
+
+<mat-card>
+ <h3>Create a new task</h3>
+<mat-form-field>
+ <input matInput placeholder="Task name" [(ngModel)]="taskName" />
+</mat-form-field>
+<p>
+<mat-form-field>
+ <select matNativeControl [(ngModel)]="taskPrio" placeholder="Task priority" >
+     <option value="High">High</option>
+     <option value="Medium">Medium</option>
+     <option value="Low">Low</option>
+ </select>
+</mat-form-field>
+</p>
+<mat-form-field>
+ <input class="lst" matInput type="date" [(ngModel)]="Date"/>   
+</mat-form-field>
+
+ <button mat-fab color="accent" (click)="addTasks(taskName, taskPrio, Date)">Send</button>
+</mat-card>
+
+<!--  
+    <p *ngFor="let task of MyArray">
+  {{task.TaskName}}
+  {{task.TaskPriority}}
+  {{task.taskDate}}
+  <button (click)="Delete(task)">Delete</button>
+</p>
+-->
+
+
+
+    
+

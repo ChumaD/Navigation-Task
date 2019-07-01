@@ -1,0 +1,10 @@
+<mat-card style="text-align: left;">
+<h3>My tasks</h3>
+
+<p *ngFor="let task of MyArray">
+        {{task.TaskName}}
+        {{task.TaskPriority}}
+        {{task.taskDate}}
+        <button mat-raised-button color="primary" (click)="Delete(task)"> <mat-icon>Delete</mat-icon></button>
+      </p>
+    </mat-card>
